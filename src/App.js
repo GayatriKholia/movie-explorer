@@ -56,7 +56,7 @@ function App() {
     <ThemeProvider>
       <UserProvider>
         <div className="app-root">
-          <NavigationBar wishlistCount={wishlist.length} />
+          <NavigationBar wishlistCount={wishlist.length} wishlist={wishlist} removeFromWishlist={removeFromWishlist} />
           <main className="container">
             <MovieList
               movies={movies}

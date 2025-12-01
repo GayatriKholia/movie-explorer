@@ -2,18 +2,24 @@
 import { useEffect, useMemo, useState } from "react";
 import Filter from "../components/Filter";
 import MovieCard from "../components/MovieCard";
-import AddRemoveMovie from "./AddRemoveMovie";
 
 export default function MovieList({ movies = [], loading, error, wishlist, addToWishlist, removeFromWishlist }) {
   const [filters, setFilters] = useState({ genre: "", minRating: "" });
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
-  const perPage = 6;
+  const perPage = 4;
 
   useEffect(() => {
     const handler = e => setQuery(e.detail || "");
     window.addEventListener("movieSearch", handler);
     return () => window.removeEventListener("movieSearch", handler);
+  }, []);
+
+  // reset filters when requested by navbar clear button
+  useEffect(() => {
+    const resetHandler = () => setFilters({ genre: "", minRating: "" });
+    window.addEventListener("resetFilters", resetHandler);
+    return () => window.removeEventListener("resetFilters", resetHandler);
   }, []);
 
   // available genres from data
@@ -43,7 +49,13 @@ export default function MovieList({ movies = [], loading, error, wishlist, addTo
   if (error) return <div className="error">{error}</div>;
 
   return (
-    <div>
+    <div className="movies-section">
+      <div className="movies-header">
+        <div>
+          <h2 className="page-title">Movie Explorer</h2>
+          <div className="results-count">{filtered.length} results</div>
+        </div>
+      </div>
       <Filter genres={genres} selected={filters} onChange={setFilters} />
       <div className="movie-grid">
         {pageItems.map(movie => {
@@ -61,20 +73,19 @@ export default function MovieList({ movies = [], loading, error, wishlist, addTo
         })}
       </div>
 
-      <div className="pagination">
-        <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1}>
+      <div className="pagination" role="navigation" aria-label="Pagination">
+        <button className="btn btn-ghost" onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1}>
           Prev
         </button>
-        <span>
+        <span className="page-indicator">
           {page} / {totalPages}
         </span>
-        <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page === totalPages}>
+        <button className="btn btn-ghost" onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page === totalPages}>
           Next
         </button>
       </div>
 
       <hr />
-      <AddRemoveMovie wishlist={wishlist} removeFromWishlist={removeFromWishlist} />
     </div>
   );
 }

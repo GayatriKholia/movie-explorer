@@ -7,12 +7,20 @@ export default function MovieCard({ movie, isWishlisted, onAdd, onRemove }) {
         <p>{movie.genre} · Rating: {movie.rating}</p>
         {/* <p>{movie.description}</p> */}
 
-        {isWishlisted ? (
-          // <button onClick={() => onRemove(movie.id)}>Remove from Wishlist</button>
-          <></>
-        ) : (
-          <button onClick={() => onAdd(movie)}>Add to Wishlist</button>
-        )}
+        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:12}}>
+          <div>
+            <h3 style={{margin:'0 0 6px 0'}}>{movie.title}</h3>
+            <p style={{margin:0, color:'var(--muted)'}}>{movie.year ? `${movie.year}` : ''}</p>
+          </div>
+
+          {isWishlisted ? (
+            <button className="btn btn-accent btn-added" title="Wishlisted">✓</button>
+          ) : (
+            <button className="btn-add" onClick={() => onAdd(movie)} aria-label={`Add ${movie.title} to wishlist`}>
+              <span className="plus">+</span>
+            </button>
+          )}
+        </div>
       </div>
     </article>
   );
