@@ -1,0 +1,103 @@
+/* Color variables */
+:root {
+  --bg-light: #f7f8fa;
+  --text-light: #222;
+  --border-light: #333;
+  --accent-light: #007bff;
+  --card-bg-light: #eaeaea;
+
+  --bg-dark: #121217;
+  --text-dark: #eee;
+  --border-dark: #333;
+  --accent-dark: #ff9800;
+  --card-bg-dark: #1e1e1e;
+}
+
+/* When theme = light */
+:root[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --border: var(--border-light);
+  --accent: var(--accent-light);
+  --card-bg: var(--card-bg-light);
+}
+
+/* When theme = dark */
+:root[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --border: var(--border-dark);
+  --accent: var(--accent-dark);
+  --card-bg: var(--card-bg-dark);
+}
+
+/* Body and app root */
+body,
+.app-root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: inherit;
+  color: inherit;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Layout */
+.container {
+  padding: 5px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Movie Card */
+.movie-card {
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  /* background: rgba(228, 77, 77, 0.05); works for both themes */
+  box-shadow: 0 2px 6px rgba(197, 195, 195, 0.06);
+}
+
+.poster {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Button UI */
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background: var(--accent);
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "m1",
+    "title": "The Avengers",
+    "genre": "Action",
+    "year": 2012,
+    "rating": 8.0,
+    "description": "Earth's Mightiest Heroes unite to stop Loki and the Chitauri invasion.",
+    "poster": "posters/Avengers2012.jpg"
+  },
+  {
+    "id": "m2",
+    "title": "Avengers: Age of Ultron",
+    "genre": "Action",
+    "year": 2015,
+    "rating": 7.3,
+    "description": "The team faces Ultron, a rogue AI bent on human extinction.",
+    "poster": "posters/AgeOfUltron2105.jpg"
+  },
+  {
+    "id": "m3",
+    "title": "Avengers: Infinity War",
+    "genre": "Action",
+    "year": 2018,
+    "rating": 8.5,
+    "description": "The Avengers confront Thanos as he seeks the Infinity Stones.",
+    "poster": "posters/InfinityWar.jpg"
+  },
+  {
+    "id": "m4",
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "year": 2019,
+    "rating": 8.4,
+    "description": "The team attempts to reverse Thanos' snap and restore humanity.",
+    "poster": "posters/Endgame.jpg"
+  },
+  {
+    "id": "m5",
+    "title": "Captain America: Civil War",
+    "genre": "Action",
+    "year": 2016,
+    "rating": 7.8,
+    "description": "A political divide creates conflict between Iron Man and Captain America.",
+    "poster": "posters/CivilWar.jpg"
+  },
+  {
+    "id": "m6",
+    "title": "Thor: Ragnarok",
+    "genre": "Action",
+    "year": 2017,
+    "rating": 7.9,
+    "description": "Thor must stop Hela from bringing destruction to Asgard.",
+    "poster": "posters/Thor1.jpg"
+  },
+  {
+    "id": "m7",
+    "title": "Iron Man",
+    "genre": "Action",
+    "year": 2008,
+    "rating": 7.9,
+    "description": "Tony Stark becomes Iron Man and changes the future of the MCU.",
+    "poster": "posters/IronMan.jpg"
+  },
+  {
+    "id": "m8",
+    "title": "Iron Man 3",
+    "genre": "Action",
+    "year": 2013,
+    "rating": 7.1,
+    "description": "Tony faces the Mandarin and personal trauma after the Battle of New York.",
+    "poster": "posters/IronMan3.jpg"
+  },
+  {
+    "id": "m9",
+    "title": "Guardians of the Galaxy",
+    "genre": "Sci-Fi",
+    "year": 2014,
+    "rating": 8.0,
+    "description": "A team of misfits comes together to stop Ronan the Accuser.",
+    "poster": "posters/Guardians.jpg"
+  },
+  {
+    "id": "m10",
+    "title": "Doctor Strange",
+    "genre": "Sci-Fi",
+    "year": 2016,
+    "rating": 7.5,
+    "description": "Dr. Stephen Strange becomes the Sorcerer Supreme and learns mystical arts.",
+    "poster": "posters/DoctorStrange.jpg"
+  },
+  {
+    "id": "m11",
+    "title": "Whispers of the Heartbeat",
+    "genre": "Romance",
+    "year": 2020,
+    "rating": 7.4,
+    "description": "Two strangers build an unexpected connection through letters found inside a cafe old wooden table.",
+    "poster": "posters/Whispers.jpg"
+  },
+  {
+    "id": "m12",
+    "title": "Moonlit Promises",
+    "genre": "Romance",
+    "year": 2023,
+    "rating": 8.1,
+    "description": "A heartfelt journey of two childhood best friends who discover their feelings for each other under the glow of a city’s lantern festival.",
+    "poster": "posters/Moonlight.jpg"
+  }
+]
